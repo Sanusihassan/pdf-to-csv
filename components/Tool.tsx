@@ -14,6 +14,7 @@ import { useFileStore } from "../src/file-store";
 import { FileInputForm } from "./Tool/FileInputForm";
 import DownloadFile from "./DownloadFile";
 import { validateFiles } from "@/src/utils";
+import { data_type } from "@/pages/[tool]";
 
 export type errorType = {
   response: {
@@ -24,16 +25,9 @@ export type errorType = {
   };
 };
 
-export type ToolData = {
-  title: string;
-  description: string;
-  color: string;
-  type: string;
-  to: string;
-};
 
 type ToolProps = {
-  data: ToolData;
+  data: data_type;
   tools: tools;
   lang: string;
   errors: _;

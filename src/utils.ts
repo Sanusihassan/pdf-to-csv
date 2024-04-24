@@ -91,8 +91,9 @@ export const getFileDetailsTooltipContent = async (
         if (pageCount === 2 && lang === "ar") {
           tooltipContent += " - صفحتين</bdi>";
         } else {
-          tooltipContent += ` - ${lang === "ar" && pageCount === 1 ? "" : pageCount + " "
-            }${pageCount > 1 ? pages : page}</bdi>`;
+          tooltipContent += ` - ${
+            lang === "ar" && pageCount === 1 ? "" : pageCount + " "
+          }${pageCount > 1 ? pages : page}</bdi>`;
         }
         URL.revokeObjectURL(url);
         if (!file.size) {
@@ -211,7 +212,7 @@ export const validateFiles = (
     dispatch(setField({ errorCode: "ERR_NO_FILES_SELECTED" }));
     return false;
   }
-  const fileSizeLimit = 50 * 1024 * 1024; // 50 MB
+  const fileSizeLimit = 100 * 1024 * 1024; // 100 MB
   for (let i = 0; i < files.length; i++) {
     const file = files[i] || null;
     extension = extension.replace(".", "").toUpperCase();
@@ -244,7 +245,7 @@ export const validateFiles = (
     ) {
       const errorMessage =
         errors.NOT_SUPPORTED_TYPE.types[
-        extension as keyof typeof errors.NOT_SUPPORTED_TYPE.types
+          extension as keyof typeof errors.NOT_SUPPORTED_TYPE.types
         ] || errors.NOT_SUPPORTED_TYPE.message;
       dispatch(setField({ errorMessage: errorMessage }));
       return false;
@@ -266,7 +267,9 @@ export const validateFiles = (
         const img = new Image();
         img.src = reader.result as string;
         img.onerror = () => {
-          dispatch(setField({ errorMessage: errors.INVALID_IMAGE_DATA.message }));
+          dispatch(
+            setField({ errorMessage: errors.INVALID_IMAGE_DATA.message })
+          );
           return false;
         };
       };

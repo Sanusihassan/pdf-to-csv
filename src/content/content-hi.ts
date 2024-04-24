@@ -36,12 +36,13 @@ export const nav_content = {
   pdf_to_markdown: "PDF से मार्कडाउन तक",
 };
 export const tool: _tool = {
-  Merge_PDF: {
-    title: "पीडीएफ विलय",
-    description: "एक दस्तावेज में कई पीडीएफ फ़ाइलों को जोड़ें",
-    color: "var(--red)",
+  PDF_to_CSV: {
+    title: "PDF को CSV में बदलें",
+    seoTitle:
+      "ऑनलाइन PDF को CSV में बदलें - मुफ्त PDF से CSV परिवर्तक | PDFEquips",
+    description: "PDF फाइलों से डेटा निकालें और CSV प्रारूप में सहेजें",
     type: ".pdf",
-    to: "/merge-pdf",
+    to: "/pdf-to-csv",
   },
 };
 
@@ -65,13 +66,14 @@ export const downloadFile: _downloadFile = {
 
 export const edit_page: _edit_page = {
   edit_page_titles: {
-    merge_pdf: "PDF फ्यूज़न विकल्प",
+    pdf_to_csv: "PDF से CSV विकल्प",
   },
   loader_text: "कृपया प्रतीक्षा करें...",
   add_more_button: "अधिक फ़ाइलें जोड़ें",
   action_buttons: {
-    merge_pdf: "पीडीएफ विलय करें",
+    pdf_to_csv: "CSV में बदलें",
   },
+
   pages: "पृष्ठों",
   page: "पृष्ठ",
 };

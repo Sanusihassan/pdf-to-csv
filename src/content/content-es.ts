@@ -10,23 +10,24 @@ import type {
 } from "../../content";
 
 export const tool: _tool = {
-  Merge_PDF: {
-    title: "Combinar PDF",
-    description: "Combina varios archivos PDF en un solo documento",
-    color: "var(--red)",
+  PDF_to_CSV: {
+    title: "Convertir PDF a CSV",
+    seoTitle:
+      "Convertir PDF a CSV en línea - Convertidor gratuito de PDF a CSV | PDFEquips",
+    description: "Extraer datos de archivos PDF y guardarlos en formato CSV",
     type: ".pdf",
-    to: "/merge-pdf",
+    to: "/pdf-to-csv",
   },
 };
 
 export const edit_page: _edit_page = {
   edit_page_titles: {
-    merge_pdf: "Opciones para fusionar PDF",
+    pdf_to_csv: "Opciones de PDF a CSV",
   },
   loader_text: "Por favor espera...",
   add_more_button: "Agrega más archivos",
   action_buttons: {
-    merge_pdf: "Combinar PDF",
+    pdf_to_csv: "Convertir a CSV",
   },
   pages: "paginas",
   page: "página",
