@@ -37,14 +37,14 @@ export default ({ item, lang }: { item: data_type; lang: string }) => {
   const websiteSchema = {
     "@context": "http://schema.org",
     "@type": "WebPage",
-    name: `PDFEquips ${item.title}`,
+    name: item.seoTitle,
     description: item.description,
     url: `https://www.pdfequips.com${asPath}`,
   };
   return (
     <>
       <Head>
-        <title>{`PDFEquips | ${item.title}`}</title>
+        <title>{item.seoTitle}</title>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -54,7 +54,7 @@ export default ({ item, lang }: { item: data_type; lang: string }) => {
         <meta name="description" content={item.description} />
         <link rel="icon" href="/logo.png" />
       </Head>
-      <NavBar path="path-to-tool" lang={lang} />
+      <NavBar path="pdf-to-csv" lang={lang} />
       <Tool
         tools={tools}
         data={item}
@@ -70,5 +70,5 @@ export default ({ item, lang }: { item: data_type; lang: string }) => {
 };
 
 export const routes = {
-  "/merge-pdf": { item: tool["Merge_PDF"] },
+  "/pdf-to-csv": { item: tool["PDF_to_CSV"] },
 };

@@ -9,14 +9,8 @@ import {
   downloadFile,
 } from "../src/content/content";
 import { useRouter } from "next/router";
-
-export type data_type = {
-  title: string;
-  description: string;
-  color: string;
-  type: string;
-  to: string;
-};
+import type { tool as _toolType } from "@/content";
+export type data_type = _toolType["PDF_to_CSV"];
 
 export async function getStaticPaths() {
   const paths = Object.keys(routes).map((key) => ({
@@ -44,14 +38,14 @@ export default ({ item }: { item: data_type }) => {
   const websiteSchema = {
     "@context": "http://schema.org",
     "@type": "WebPage",
-    name: `PDFEquips ${item.title}`,
+    name: item.seoTitle,
     description: item.description,
     url: `https://www.pdfequips.com${asPath}`,
   };
   return (
     <>
       <Head>
-        <title>{`PDFEquips | ${item.title}`}</title>
+        <title>{item.seoTitle}</title>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -66,7 +60,7 @@ export default ({ item }: { item: data_type }) => {
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         />
       </Head>
-      <NavBar path="path-to-tool" lang="" />
+      <NavBar path="pdf-to-csv" lang="" />
       <Tool
         tools={tools}
         data={item}
@@ -83,5 +77,5 @@ export default ({ item }: { item: data_type }) => {
 
 // export default ToolPage;
 export const routes = {
-  "/merge-pdf": { item: tool["Merge_PDF"] },
+  "/pdf-to-csv": { item: tool["PDF_to_CSV"] },
 };

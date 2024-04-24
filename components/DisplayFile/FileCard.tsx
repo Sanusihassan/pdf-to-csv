@@ -116,8 +116,8 @@ const FileCard = ({
             draggable={false}
           />
         ) : null}
-
-        <p className="text-center">{file.name}</p>
+        {/*  to not destroy the design i want to truncate the file name if it's a bunch of letters and insert elipces */}
+        <p className="text-center truncate">{file.name}</p>
       </div>
     </div>
   );

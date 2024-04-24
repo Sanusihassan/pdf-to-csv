@@ -9,12 +9,13 @@ import type {
 } from "../../content";
 
 export const tool: _tool = {
-  Merge_PDF: {
-    title: "دمج PDF",
-    description: "دمج ملفات PDF متعددة في مستند واحد",
-    color: "var(--red)",
+  PDF_to_CSV: {
+    title: "تحويل PDF إلى CSV",
+    seoTitle:
+      "تحويل PDF إلى CSV عبر الإنترنت - محول مجاني من PDF إلى CSV | PDFEquips",
+    description: "استخراج البيانات من ملفات PDF وحفظها بتنسيق CSV",
     type: ".pdf",
-    to: "/merge-pdf",
+    to: "/pdf-to-csv",
   },
 };
 
@@ -39,12 +40,12 @@ export const downloadFile: _downloadFile = {
 
 export const edit_page: _edit_page = {
   edit_page_titles: {
-    merge_pdf: "خيارات دمج ملف PDF",
+    pdf_to_csv: "خيارات تحويل PDF إلى CSV",
   },
   loader_text: "يرجى الانتظار...",
   add_more_button: "إضافة المزيد من الملفات",
   action_buttons: {
-    merge_pdf: "دمج PDF",
+    pdf_to_csv: "تحويل إلى CSV",
   },
   pages: "صفحة",
   page: "صفحة واحدة",

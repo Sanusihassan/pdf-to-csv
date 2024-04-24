@@ -10,12 +10,12 @@ import type {
 } from "../../content";
 
 export const tool: _tool = {
-  Merge_PDF: {
-    title: "合并PDF",
-    description: "将多个PDF文件合并成一个文档",
-    color: "var(--red)",
+  PDF_to_CSV: {
+    title: "将PDF转换为CSV",
+    seoTitle: "在线将PDF转换为CSV - 免费PDF到CSV转换器 | PDFEquips",
+    description: "从PDF文件中提取数据并以CSV格式保存",
     type: ".pdf",
-    to: "/merge-pdf",
+    to: "/pdf-to-csv",
   },
 };
 
@@ -33,12 +33,12 @@ export const downloadFile: _downloadFile = {
 
 export const edit_page: _edit_page = {
   edit_page_titles: {
-    merge_pdf: "合并PDF选项",
+    pdf_to_csv: "PDF 转 CSV 选项",
   },
   loader_text: "请稍等...",
   add_more_button: "添加更多文件",
   action_buttons: {
-    merge_pdf: "合并PDF",
+    pdf_to_csv: "转换为 CSV",
   },
   pages: "页",
   page: "页",

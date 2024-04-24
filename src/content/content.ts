@@ -1,22 +1,22 @@
 export const tool = {
-  Merge_PDF: {
-    title: "Merge PDF",
-    description: "Combine multiple PDF files into one document",
-    color: "var(--red)",
+  PDF_to_CSV: {
+    title: "Convert PDF to CSV",
+    seoTitle:
+      "Convert PDF to CSV Online - Free PDF to CSV Converter | PDFEquips",
+    description: "Extract data from PDF files and save it in CSV format",
     type: ".pdf",
-    to: "/merge-pdf",
+    to: "/pdf-to-csv",
   },
 };
 
 export const edit_page = {
   edit_page_titles: {
-    merge_pdf: "Merge PDF options",
+    pdf_to_csv: "PDF to CSV options",
   },
   loader_text: "please wait...",
   add_more_button: "Add more files",
-  // translate the values of this object to french.
   action_buttons: {
-    merge_pdf: "Merge PDF",
+    pdf_to_csv: "Convert To CSV",
   },
   pages: "pages",
   page: "page",

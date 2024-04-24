@@ -19,6 +19,7 @@ $color-map: (
   "word-to-pdf": #1b5ebe,
   "powerpoint-to-pdf": #c13b1b,
   "excel-to-pdf": #10793f,
+  "pdf-to-csv": #10793f,
   "web-to-pdf": #0984e3,
   "pdf-to-text": #4493e1,
   "html-to-pdf": rgb(228, 77, 38),
@@ -145,4 +146,11 @@ footer {
       justify-content: space-between !important;
     }
   }
+}
+
+.truncate {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
