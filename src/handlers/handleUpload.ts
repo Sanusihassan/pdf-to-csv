@@ -46,14 +46,14 @@ export const handleUpload = async (
   let url;
   // @ts-ignore
   if (process.env.NODE_ENV === "development") {
-    url = `http://127.0.0.1:5000/${state.path}`;
+    url = `http://207.180.196.128:5000/api/${state.path}`;
     // url = `https://5000-planetcreat-pdfequipsap-te4zoi6qkr3.ws-eu102.gitpod.io/${state.path}`;
   } else {
     url = `/api/${state.path}`;
   }
-  if (state.errorMessage) {
-    return;
-  }
+  // if (state.errorMessage) {
+  //   return;
+  // }
   // formData.append("compress_amount", String(state.compressPdf));
   const originalFileName = files[0]?.name?.split(".").slice(0, -1).join(".");
 
@@ -130,6 +130,7 @@ export const handleUpload = async (
       dispatch(setField({ isSubmitted: false }));
     }
   } catch (error) {
+    console.log(error);
     if ((error as { code: string }).code === "ERR_NETWORK") {
       dispatch(setField({ errorMessage: errors.ERR_NETWORK.message }));
       return;
