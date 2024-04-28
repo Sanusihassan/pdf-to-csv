@@ -40,23 +40,26 @@ export const tools: _tools = {
   drop_files: "Arrastra los archivos aquí",
 };
 
-export const downloadFile: _downloadFile = {
+export const downloadFile = {
   titles: {
-    "merge-pdf": [
-      "¡Combinación de archivos PDF exitosa!",
-      "¡Combinación de archivo PDF exitosa!",
+    "pdf-to-csv": [
+      "¡Los archivos PDF se han convertido a CSV!",
+      "¡El archivo PDF se ha convertido a CSV!",
     ],
   },
+
   btnText: {
-    "merge-pdf": [
-      "Descargar archivos PDF combinados",
-      "Descargar archivo PDF combinado",
+    "pdf-to-csv": [
+      "Descargar archivos PDF convertidos",
+      "Descargar archivo PDF convertido",
     ],
   },
+
   backto: {
-    "merge-pdf": "Volver a unir PDF",
+    "pdf-to-csv": "Volver a PDF a CSV",
   },
 };
+
 
 export const errors: _errors = {
   EMPTY_FILE: {

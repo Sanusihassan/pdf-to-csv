@@ -3,10 +3,7 @@ import { Dispatch, RefObject } from "react";
 import { downloadConvertedFile } from "../downloadFile";
 import type { errors as _ } from "../../content";
 import { AnyAction } from "@reduxjs/toolkit";
-import {
-  resetErrorMessage,
-  setField
-} from "../store";
+import { resetErrorMessage, setField } from "../store";
 
 export const handleUpload = async (
   e: React.FormEvent<HTMLFormElement>,
@@ -33,7 +30,11 @@ export const handleUpload = async (
     filesOnSubmit.includes(fileName)
   );
 
-  if (allFilesPresent && files.length === filesOnSubmit.length) {
+  if (
+    allFilesPresent &&
+    files.length === filesOnSubmit.length &&
+    "development" !== process.env.NODE_ENV
+  ) {
     dispatch(setField({ showDownloadBtn: true }));
     dispatch(resetErrorMessage());
     return;
@@ -46,12 +47,12 @@ export const handleUpload = async (
   let url;
   // @ts-ignore
   if (process.env.NODE_ENV === "development") {
-    url = `http://127.0.0.1:5000/${state.path}`;
+    url = `https://super-eureka-q7q996vqx766f47w9-8000.app.github.dev/api/${state.path}`;
     // url = `https://5000-planetcreat-pdfequipsap-te4zoi6qkr3.ws-eu102.gitpod.io/${state.path}`;
   } else {
     url = `/api/${state.path}`;
   }
-  if (state.errorMessage) {
+  if (state.errorMessage && "development" !== process.env.NODE_ENV) {
     return;
   }
   // formData.append("compress_amount", String(state.compressPdf));
@@ -68,37 +69,13 @@ export const handleUpload = async (
       outputFileMimeType: "application/pdf",
       outputFileName: `${originalFileName}.pdf`,
     },
-    "application/msword": {
-      outputFileMimeType: "application/msword",
-      outputFileName: `${originalFileName}.docx`,
+    "text/csv": {
+      outputFileMimeType: "text/csv",
+      outputFileName: `${originalFileName}.csv`,
     },
-    "application/vnd.openxmlformats-officedocument.wordprocessingml.document": {
-      outputFileMimeType:
-        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      outputFileName: `${originalFileName}.docx`,
-    },
-    "application/vnd.ms-excel": {
-      outputFileMimeType: "application/vnd.ms-excel",
-      outputFileName: `${originalFileName}.xlsx`,
-    },
-    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": {
-      outputFileMimeType:
-        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-      outputFileName: `${originalFileName}.xlsx`,
-    },
-    "application/vnd.ms-powerpoint": {
-      outputFileMimeType: "application/vnd.ms-powerpoint",
-      outputFileName: `${originalFileName}.pptx`,
-    },
-    "application/vnd.openxmlformats-officedocument.presentationml.presentation":
-    {
-      outputFileMimeType:
-        "application/vnd.openxmlformats-officedocument.presentationml.presentation",
-      outputFileName: `${originalFileName}.pptx`,
-    },
-    "text/plain": {
-      outputFileMimeType: "text/plain",
-      outputFileName: `${originalFileName}.txt`,
+    "text/csv; charset=utf-8": {
+      outputFileMimeType: "text/csv; charset=utf-8",
+      outputFileName: `${originalFileName}.csv`,
     },
   };
 
@@ -106,6 +83,7 @@ export const handleUpload = async (
     const response = await axios.post(url, formData, {
       responseType: "arraybuffer",
     });
+    console.log(response);
     // const originalFileName = files[0]?.name?.split(".").slice(0, -1).join(".");
     const mimeType = response.data.type || response.headers["content-type"];
     const mimeTypeData = mimeTypeLookupTable[mimeType] || {
@@ -121,7 +99,7 @@ export const handleUpload = async (
       outputFileName,
       downloadBtn
     );
-    setFilesOnSubmit(files.map(f => f.name));
+    setFilesOnSubmit(files.map((f) => f.name));
 
     if (response.status !== 200) {
       throw new Error(`HTTP error! status: ${response.status}`);

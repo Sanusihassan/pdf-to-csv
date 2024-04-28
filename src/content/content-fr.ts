@@ -28,21 +28,23 @@ export const tools: _tools = {
   drop_files: "Déposez les fichiers ici",
 };
 
-export const downloadFile: _downloadFile = {
+export const downloadFile = {
   titles: {
-    "merge-pdf": [
-      "Fusion de fichiers PDF réussie !",
-      "Fusion de fichier PDF réussie !",
+    "pdf-to-csv": [
+      "Les fichiers PDF ont été convertis en CSV !",
+      "Le fichier PDF a été converti en CSV !",
     ],
   },
+
   btnText: {
-    "merge-pdf": [
-      "Télécharger les fichiers PDF fusionnés",
-      "Télécharger le fichier PDF fusionné",
+    "pdf-to-csv": [
+      "Télécharger les fichiers PDF convertis",
+      "Télécharger le fichier PDF converti",
     ],
   },
+
   backto: {
-    "merge-pdf": "Retour à Fusionner PDF",
+    "pdf-to-csv": "Retour à PDF vers CSV",
   },
 };
 
