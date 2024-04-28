@@ -10,6 +10,6 @@ export const downloadConvertedFile = (
   if (downloadBtn && downloadBtn.current) {
     downloadBtn.current.setAttribute("download", fileName);
     downloadBtn.current.href = url;
-    downloadBtn.current.click();
+    // downloadBtn.current.click();
   }
 };

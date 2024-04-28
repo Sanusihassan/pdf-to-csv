@@ -29,17 +29,24 @@ export const tools = {
   drop_files: "Drag files here",
 };
 
+// this object is in english, i want arabic version, just translate string values but not the property names
 export const downloadFile = {
   titles: {
-    "merge-pdf": ["PDF files have been merged!", "PDF file has been merged!"],
+    "pdf-to-csv": [
+      "PDF files have been converted to CSV!",
+      "PDF file has been converted to CSV!",
+    ],
   },
 
   btnText: {
-    "merge-pdf": ["Download Merged PDF files", "Download Merged PDF file"],
+    "pdf-to-csv": [
+      "Download Converted PDF files",
+      "Download Converted PDF file",
+    ],
   },
 
   backto: {
-    "merge-pdf": "Back To Merge PDF",
+    "pdf-to-csv": "Back To PDF to CSV",
   },
 };
 

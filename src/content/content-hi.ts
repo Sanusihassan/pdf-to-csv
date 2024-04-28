@@ -46,21 +46,23 @@ export const tool: _tool = {
   },
 };
 
-export const downloadFile: _downloadFile = {
+export const downloadFile = {
   titles: {
-    "merge-pdf": [
-      "PDF फ़ाइलें मर्ज़ की गई हैं!",
-      "PDF फ़ाइल को मर्ज़ किया गया है!",
+    "pdf-to-csv": [
+      "PDF फ़ाइलें CSV में परिवर्तित की गई हैं!",
+      "PDF फ़ाइल CSV में परिवर्तित की गई है!",
     ],
   },
+
   btnText: {
-    "merge-pdf": [
-      "मर्ज़ की गई PDF फ़ाइलें डाउनलोड करें",
-      "मर्ज़ की गई PDF फ़ाइल डाउनलोड करें",
+    "pdf-to-csv": [
+      "परिवर्तित PDF फ़ाइलें डाउनलोड करें",
+      "परिवर्तित PDF फ़ाइल डाउनलोड करें",
     ],
   },
+
   backto: {
-    "merge-pdf": "मर्ज़ की गई PDF को वापस जाएं",
+    "pdf-to-csv": "PDF से CSV पर वापस जाएं",
   },
 };
 

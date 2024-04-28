@@ -26,15 +26,17 @@ export const tools: _tools = {
   drop_files: "قم بوضع الملفات هنا",
 };
 
-export const downloadFile: _downloadFile = {
+export const downloadFile = {
   titles: {
-    "merge-pdf": ["تم دمج ملفات ال PDF!", "تم دمج ملف ال PDF!"],
+    "pdf-to-csv": ["تم تحويل ملفات PDF إلى CSV!", "تم تحويل ملف PDF إلى CSV!"],
   },
+
   btnText: {
-    "merge-pdf": ["تحميل ملفات PDF المدموجة", "تحميل ملف PDF مدموج"],
+    "pdf-to-csv": ["تحميل الملفات المحولة من PDF", "تحميل الملف المحول من PDF"],
   },
+
   backto: {
-    "merge-pdf": "العودة إلى دمج ملفات PDF",
+    "pdf-to-csv": "العودة إلى PDF إلى CSV",
   },
 };
 

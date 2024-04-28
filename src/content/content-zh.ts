@@ -19,17 +19,20 @@ export const tool: _tool = {
   },
 };
 
-export const downloadFile: _downloadFile = {
+export const downloadFile = {
   titles: {
-    "merge-pdf": ["PDF文件已合并！", "PDF文件已合并！"],
+    "pdf-to-csv": ["PDF 文件已转换为 CSV！", "PDF 文件已转换为 CSV！"],
   },
+
   btnText: {
-    "merge-pdf": ["下载合并后的PDF文件", "下载合并后的PDF文件"],
+    "pdf-to-csv": ["下载转换后的 PDF 文件", "下载转换后的 PDF 文件"],
   },
+
   backto: {
-    "merge-pdf": "返回合并PDF",
+    "pdf-to-csv": "返回到 PDF 到 CSV",
   },
 };
+
 
 export const edit_page: _edit_page = {
   edit_page_titles: {
