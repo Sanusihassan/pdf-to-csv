@@ -9,32 +9,6 @@ import type {
   landing_page as _landing_page,
 } from "../../content";
 
-export const nav_content = {
-  // इसे अनदेखा करें
-  brand: "Equips",
-  merge_pdf: "पीडीएफ विलय करें",
-  split_pdf: "पीडीएफ विभाजित करें",
-  compress_pdf: "पीडीएफ संपीड़ित करें",
-  convert_pdf: "पीडीएफ परिवर्तित करें",
-  convert_to_pdf: "पीडीएफ में परिवर्तित करें",
-  jpg_to_pdf: "जेपीजी से पीडीएफ",
-  word_to_pdf: "शब्द से पीडीएफ",
-  markdown_to_pdf: "पीडीएफ में मार्कडाउन करें",
-  powerpoint_to_pdf: "पावरपॉइंट से पीडीएफ",
-  excel_to_pdf: "एक्सेल से पीडीएफ",
-  html_to_pdf: "एचटीएमएल से पीडीएफ",
-  web_to_pdf: "वेब से पीडीएफ",
-  convert_from_pdf: "पीडीएफ से परिवर्तित करें",
-  read_edit_pdf: "पीडीएफ पढ़ें और संपादित करें",
-  pdf_to_jpg: "पीडीएफ से जेपीजी",
-  pdf_to_word: "पीडीएफ से शब्द",
-  pdf_to_powerpoint: "पीडीएफ से पावरपॉइंट",
-  pdf_to_excel: "पीडीएफ से एक्सेल",
-  pdf_to_pdf_a: "पीडीएफ से पीडीएफ/ए",
-  pdf_to_text: "पाठ के लिए पीडीएफ",
-  pdf_to_html: "पीडीएफ से एचटीएमएल",
-  pdf_to_markdown: "PDF से मार्कडाउन तक",
-};
 export const tool: _tool = {
   PDF_to_CSV: {
     title: "PDF को CSV में बदलें",
@@ -43,6 +17,20 @@ export const tool: _tool = {
     description: "PDF फाइलों से डेटा निकालें और CSV प्रारूप में सहेजें",
     type: ".pdf",
     to: "/pdf-to-csv",
+    features: [
+      {
+        title: "सटीक रूपांतरण",
+        description: "PDFEquips एक अत्यंत सटीक PDF से CSV रूपांतरण सेवा प्रदान करता है, यह सुनिश्चित करता है कि आपका डेटा CSV प्रारूप में सही तरीके से संरक्षित हो।"
+      },
+      {
+        title: "तेज़ प्रसंस्करण",
+        description: "हमारा PDF से CSV कनवर्टर फाइलों को तेजी से प्रोसेस करने के लिए डिज़ाइन किया गया है, जिससे आप कुछ ही सेकंड में अपने कनवर्ट किए गए CSV को प्राप्त कर सकते हैं।"
+      },
+      {
+        title: "मजबूत कार्यक्षमता",
+        description: "यह उपकरण विभिन्न आकारों और जटिलताओं की PDF फाइलों को संभालने के लिए बनाया गया है, जिससे हर बार मजबूत और विश्वसनीय रूपांतरण सुनिश्चित होता है।"
+      }
+    ]
   },
 };
 
@@ -85,6 +73,13 @@ export const tools: _tools = {
   or_drop: "या फ़ाइलें यहां छोड़ें",
   files: "फाइलें",
   drop_files: "फ़ाइलें यहाँ खींचें",
+};
+
+export const footer: _footer = {
+  brand: "PDFEquips",
+  terms: "शर्तें",
+  conditions: "उपयोग की शर्तें",
+  privacy_policy: "गोपनीयता नीति",
 };
 
 export const errors: _errors = {

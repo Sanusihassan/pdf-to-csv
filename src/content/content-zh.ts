@@ -16,6 +16,20 @@ export const tool: _tool = {
     description: "从PDF文件中提取数据并以CSV格式保存",
     type: ".pdf",
     to: "/pdf-to-csv",
+    features: [
+      {
+        title: "精准转换",
+        description: "PDFEquips 提供高度精准的 PDF 转换为 CSV 服务，确保您的数据在 CSV 格式中正确保留。"
+      },
+      {
+        title: "快速处理",
+        description: "我们的 PDF 转 CSV 转换器旨在快速处理文件，让您在几秒钟内获得转换后的 CSV。"
+      },
+      {
+        title: "强大的功能",
+        description: "该工具可以处理不同大小和复杂性的各种 PDF 文件，确保每次都能进行强大而可靠的转换。"
+      }
+    ]
   },
 };
 
@@ -52,6 +66,13 @@ export const tools: _tools = {
   or_drop: "或将文件拖放到此处",
   files: "文件",
   drop_files: "在此处拖放文件",
+};
+
+export const footer: _footer = {
+  brand: "PDFEquips",
+  terms: "条款",
+  conditions: "条件",
+  privacy_policy: "隐私政策",
 };
 
 export const errors: _errors = {

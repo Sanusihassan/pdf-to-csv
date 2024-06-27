@@ -17,6 +17,21 @@ export const tool: _tool = {
     description: "Extraer datos de archivos PDF y guardarlos en formato CSV",
     type: ".pdf",
     to: "/pdf-to-csv",
+    features: [
+      {
+        title: "Conversión precisa",
+        description: "PDFEquips proporciona un servicio de conversión de PDF a CSV altamente preciso, asegurando que tus datos se conserven correctamente en el formato CSV."
+      },
+      {
+        title: "Procesamiento rápido",
+        description: "Nuestro convertidor de PDF a CSV está diseñado para procesar archivos rápidamente, permitiéndote obtener tu CSV convertido en solo unos segundos."
+      },
+      {
+        title: "Funcionalidad robusta",
+        description: "La herramienta está diseñada para manejar varios archivos PDF de diferentes tamaños y complejidades, asegurando una conversión robusta y confiable cada vez."
+      }
+    ]
+
   },
 };
 
@@ -60,6 +75,12 @@ export const downloadFile = {
   },
 };
 
+export const footer: _footer = {
+  brand: "PDFEquips",
+  terms: "términos",
+  conditions: "condiciones",
+  privacy_policy: "política de privacidad",
+};
 
 export const errors: _errors = {
   EMPTY_FILE: {

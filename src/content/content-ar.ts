@@ -16,6 +16,20 @@ export const tool: _tool = {
     description: "استخراج البيانات من ملفات PDF وحفظها بتنسيق CSV",
     type: ".pdf",
     to: "/pdf-to-csv",
+    features: [
+      {
+        title: "تحويل دقيق",
+        description: "يقدم PDFEquips خدمة تحويل PDF إلى CSV بدقة عالية، مما يضمن الحفاظ على بياناتك بشكل صحيح في تنسيق CSV."
+      },
+      {
+        title: "معالجة سريعة",
+        description: "تم تصميم محول PDF إلى CSV الخاص بنا لمعالجة الملفات بسرعة، مما يتيح لك الحصول على ملف CSV المحول في بضع ثوانٍ فقط."
+      },
+      {
+        title: "وظائف قوية",
+        description: "تم بناء الأداة للتعامل مع ملفات PDF المختلفة الأحجام والتعقيدات، مما يضمن تحويل قوي وموثوق في كل مرة."
+      }
+    ]
   },
 };
 
@@ -51,6 +65,13 @@ export const edit_page: _edit_page = {
   },
   pages: "صفحة",
   page: "صفحة واحدة",
+};
+
+export const footer: _footer = {
+  brand: "PDFEquips",
+  terms: "الشروط",
+  conditions: "والأحكام",
+  privacy_policy: "سياسة الخصوصية",
 };
 
 export const errors: _errors = {
