@@ -19,7 +19,7 @@ const HowTo = ({ howTo, alt, imgSrc }: {
                 <div className="col-12 col-md-6 text-center image">
                     <picture>
                         <source srcSet={`/images/${imgSrc}-ad-xs.png`} media="(max-width: 575px)" />
-                        <source srcSet={`/images/${imgSrc}-ad-md.png`} media="(min-width: 576px) and (max-width: 1199px)" />
+                        <source srcSet={`/images/${imgSrc}-ad-md.png`} media="(min-width: 575px) and (max-width: 1200px)" />
                         <source srcSet={`/images/${imgSrc}-ad-xl.png`} media="(min-width: 1200px)" />
                         <img src={`/pdfequips.png`} className="img-fluid" alt={alt} title={alt} />
                     </picture>
