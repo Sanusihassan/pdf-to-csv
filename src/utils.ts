@@ -5,9 +5,8 @@ import type { errors as _ } from "../content";
 import { setField } from "./store";
 import { getDocument } from "pdfjs-dist";
 import { PDFDocumentProxy, PageViewport, RenderTask } from "pdfjs-dist";
-const pdfjsWorker = await import("pdfjs-dist/build/pdf.worker.entry");
 import { GlobalWorkerOptions } from "pdfjs-dist";
-GlobalWorkerOptions.workerSrc = pdfjsWorker;
+GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js`
 
 export function useLoadedImage(src: string): HTMLImageElement | null {
   const [loadedImage, setLoadedImage] = useState<HTMLImageElement | null>(null);
@@ -91,9 +90,8 @@ export const getFileDetailsTooltipContent = async (
         if (pageCount === 2 && lang === "ar") {
           tooltipContent += " - صفحتين</bdi>";
         } else {
-          tooltipContent += ` - ${
-            lang === "ar" && pageCount === 1 ? "" : pageCount + " "
-          }${pageCount > 1 ? pages : page}</bdi>`;
+          tooltipContent += ` - ${lang === "ar" && pageCount === 1 ? "" : pageCount + " "
+            }${pageCount > 1 ? pages : page}</bdi>`;
         }
         URL.revokeObjectURL(url);
         if (!file.size) {
@@ -245,7 +243,7 @@ export const validateFiles = (
     ) {
       const errorMessage =
         errors.NOT_SUPPORTED_TYPE.types[
-          extension as keyof typeof errors.NOT_SUPPORTED_TYPE.types
+        extension as keyof typeof errors.NOT_SUPPORTED_TYPE.types
         ] || errors.NOT_SUPPORTED_TYPE.message;
       dispatch(setField({ errorMessage: errorMessage }));
       return false;
